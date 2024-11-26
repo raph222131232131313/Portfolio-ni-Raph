@@ -1,0 +1,825 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 11%;
+    background: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.header:hover {
+    background: rgba(0, 0, 0, 1); /* Turns fully opaque on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Enhance shadow on hover */
+}
+
+.header.scrolled {
+    padding: 10px 10%; /* Further compact header when scrolling */
+    background: rgba(0, 0, 0, 0.9); /* Slightly darker background */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.header .logo {
+    font-size: 20px; /* Reduced logo size */
+    color: #000000; /* Highlight logo with pink color */
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: transform 0.3s ease;
+}
+
+.header .logo:hover {
+    transform: scale(1.1); /* Slight zoom effect on logo */
+    text-shadow: 0 4px 8px rgb(255, 0, 234); /* Glow effect */
+}
+
+.header nav {
+    display: flex;
+    gap: 15px; /* Reduced gap between navigation links */
+}
+
+.header nav a {
+    font-size: 14px; /* Reduced font size for navigation links */
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 6px 12px; /* Smaller padding for a compact look */
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    outline: none; /* Removes any outline */
+    border: none; /* Ensures no border is applied */
+}
+
+.header nav a:hover {
+    background: #ff1493; /* Pink background on hover */
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(255, 20, 147, 0.4); /* Glow effect on hover */
+}
+
+.header nav a.active {
+    background: #ff1493; /* Highlight the active page link */
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(255, 20, 147, 0.4);
+}
+
+.logo{
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.logo:hover{
+    color: rgb(247, 0, 255);
+    text-shadow: 0 0 25px rgb(0, 0, 0),
+                 0 0 50px rgb(0, 0, 0);
+    transform: scale(1.1);
+}
+
+span{
+    color: rgb(204, 2, 255);
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00000000; /* Dark background for contrast */
+    padding: 10px 20px; /* Reduced padding */
+    position: sticky; /* Keeps the navbar fixed while scrolling */
+    top: 0;
+    z-index: 1000;
+    font-size: 15px; /* Slightly smaller text */
+  }
+  
+  /* Style for the links inside the navbar */
+  .navbar a {
+    font-size: 15px; /* Reduced font size */
+    color: rgba(2, 2, 2, 0.8); /* Soft white */
+    font-weight: 500;
+    text-decoration: none;
+    margin: 0 10px; /* Reduced margin between links */
+    padding: 5px 10px; /* Reduced link padding */
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Hover effect for links */
+  .navbar a:hover, .navbar a.active {
+    color: #000000; /* Bright white on hover */
+    background-color: rgba(255, 0, 157, 0.8); /* Highlight effect */
+  }
+  
+  /* Optional: Add shadow when hovering */
+  .navbar a:hover {
+    box-shadow: 0 3px 6px rgba(255, 0, 157, 0.3);
+  }
+
+.contact{
+    padding: 10px 28px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.contact:hover{
+    background-color: rgb(255, 0, 200);
+    box-shadow: 0 0 25px rgb(225, 0, 255);
+    color: rgb(0, 0, 0);
+}
+
+.home {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f0f8ff, #dbe8ff); /* Gradient background for a soft effect */
+    display: flex;
+    align-items: center;
+    gap: 7em;
+    padding: 30px 12% 0;
+    position: relative; /* To position elements dynamically */
+    overflow: hidden; /* To hide any excess animation elements */
+}
+
+.home::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -100px;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 0, 157, 0.1); /* Semi-transparent pink bubble */
+    border-radius: 50%;
+    z-index: 0;
+    animation: float 6s ease-in-out infinite; /* Bubble floating animation */
+}
+
+.home::after {
+    content: '';
+    position: absolute;
+    bottom: -70px;
+    left: -120px;
+    width: 250px;
+    height: 250px;
+    background: rgba(0, 149, 255, 0.1); /* Semi-transparent blue bubble */
+    border-radius: 50%;
+    z-index: 0;
+    animation: float-reverse 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-30px); }
+}
+
+@keyframes float-reverse {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(30px); }
+}
+
+.home-content {
+    max-width: 800px;
+    position: relative;
+    z-index: 1; /* Ensures content is above the background bubbles */
+}
+
+.home-content h3 {
+    font-size: 43px;
+    color: #ff1493; /* Bright pink color */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: transform 0.3s ease;
+}
+
+.home-content h3:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+.home-content h1 {
+    font-size: 62px;
+    line-height: 1.2;
+    background: linear-gradient(to right, #ff1493, #0066ff);
+    -webkit-background-clip: text;
+    color: transparent; /* Makes the gradient visible through the text */
+    animation: gradient-move 4s ease infinite;
+}
+
+@keyframes gradient-move {
+    0% { background-position: 0%; }
+    100% { background-position: 100%; }
+}
+
+.home-content p {
+    font-size: 18px;
+    margin: 25px 0 30px;
+    color: #555;
+    line-height: 1.6;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.home-content p:hover {
+    transform: translateX(10px); /* Subtle shift on hover */
+    color: #333;
+}
+
+.btn-1 {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 18px;
+    color: #fff;
+    background: #ff1493;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 8px 15px rgba(255, 20, 147, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-1:hover {
+    transform: translateY(-5px); /* Button lifts on hover */
+    box-shadow: 0 12px 20px rgba(255, 20, 147, 0.4); /* Enhance shadow */
+}
+
+.btn-2 {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 18px;
+    color: #fff;
+    background: #ff1493;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 8px 15px rgba(255, 20, 147, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-2:hover {
+    transform: translateY(-5px); /* Button lifts on hover */
+    box-shadow: 0 12px 20px rgba(255, 20, 147, 0.4); /* Enhance shadow */
+}
+
+.btn-box{
+    width: 345px;
+    display: flex;
+    gap: 2em;
+}
+
+.btn-1{
+    padding: 15px 28px;
+    background-color: black;
+    color: white;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-size:  18px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-1:hover{
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+
+.btn-2{
+    padding: 15px 28px;
+    background-color: rgb(140, 17, 255);
+    color: white;
+    border: 2px solid black;
+    border-radius: 8px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-2:hover{
+    background-color: white;
+    color: rgb(132, 0, 255);
+}
+
+.img-box img{
+    border-radius: 50%;
+    width: 550px;
+}
+
+::-webkit-scrollbar{
+    width: 15px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: rgb(153, 0, 255);
+}
+
+::-webkit-scrollbar-track{
+    background-color: rgb(0, 0, 0);
+    width: 50px;
+}
+
+.about-me{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12% 8%;
+    gap: 10em;
+    background: rgb(0, 0, 0);
+}
+
+.about-img img{
+    position: relative;
+    width: 550px;
+    box-shadow: 0 0 25px rgb(255, 0, 255),
+                0 0 50px  rgb(255, 0, 179);
+    border-radius: 50%;
+}
+
+.about-content h2{
+    text-align: left;
+    color: rgb(255, 255, 255);
+    font-size: 42px;
+}
+
+.about-content p{
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    margin: 2em 0 3em;
+}
+
+.achievements{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    background: fixed;
+}
+
+.heading{
+    font-size: 4rem;
+    text-align: center;
+}
+
+.achievements-content{
+    padding: 0 4rem;
+}
+
+.achievements-content h2{
+    text-align: left;
+    line-height: 1.2;
+}
+
+.achievements-content h3{
+    font-size: 3rem;
+}
+
+.btn-3{
+    padding: 15px 28px;
+    background-color: rgb(140, 17, 255);
+    color: white;
+    border: 2px solid black;
+    border-radius: 8px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-3:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(132, 0, 255);
+}
+
+.achievements-content p{
+    font-size: 1.1rem;
+    margin: 2rem 0 3rem;
+}
+
+.hobbies {
+    background-color: #c28ad3; /* Light background color */
+    padding: 50px 20px; /* Adds space inside the section */
+    border-radius: 15px; /* Smooth corners */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); 
+}
+
+.hobbies:hover {
+    background-color: white; /* Slightly different shade on hover */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+.hobbies-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+  }
+  
+  /* Individual hobby box styles */
+  .hobbies-box {
+    background: #078376;
+    background-color: #e9d5fc; /* Light teal background */
+    border: 2px solid #83c5be; /* Border with a matching color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .hobbies-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Icon styles */
+  .hobbies-box i {
+    font-size: 40px;
+    color: #6c63ff; /* Icon color */
+    margin-bottom: 10px;
+  }
+  
+  /* Heading styles */
+  .hobbies-box h3 {
+    font-size: 1.5em;
+    color: #050505;
+    margin-bottom: 10px;
+  }
+  
+  /* Paragraph styles */
+  .hobbies-box p {
+    font-size: 1em;
+    color: #050505; /* Text color */
+    line-height: 1.6;
+  }
+  
+  /* Button styles */
+  .hobbies-box .btn-4 {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 0.9em;
+    color: white;
+    background-color: #ae76f8;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .hobbies-box .btn-4:hover {
+    background-color: #ff21c8;
+  }
+
+  .hobbies h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: #6c63ff; /* Main color */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .hobbies h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #6c63ff;
+    margin: 10px auto 0 auto;
+    border-radius: 2px;
+    transition: width 0.3s ease, background 0.3s ease;
+  }
+  
+  .hobbies h2:hover {
+    color: #4e4abf; /* Darker shade on hover */
+    transform: scale(1.1); /* Slight enlargement */
+  }
+  
+  .hobbies h2:hover::after {
+    width: 120px; /* Expanded underline effect */
+    background: #4e4abf; /* Match hover color */
+  }
+
+.btn-4{
+    padding: 15px 28px;
+    background-color: rgb(140, 17, 255);
+    color: white;
+    border: 2px solid black;
+    border-radius: 8px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.My-Shots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.Shots-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 20px;
+    max-width: 80%;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05); /* Zoom effect when hovered */
+}
+
+.gallery-item img:hover {
+    transform: scale(1.1); /* Zoom effect on image hover */
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000; /* Black background */
+    color: white;
+}
+
+/* Interactive Header */
+.interactive-header {
+    position: relative;
+    background-color: #000; /* Black background for header */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    overflow: hidden;
+}
+
+.interactive-header h1 {
+    font-size: 40px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    z-index: 10;
+    position: relative;
+}
+
+/* Glowing Bubbles Effect */
+.bubbles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.bubbles::before,
+.bubbles::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 10%, transparent 50%);
+    animation: moveBubbles 10s infinite linear;
+    opacity: 0.5;
+}
+
+.bubbles::after {
+    animation-duration: 15s;
+    animation-direction: reverse;
+}
+
+@keyframes moveBubbles {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(-100%);
+    }
+}
+
+.interactive-header h1{
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: #6c63ff; /* Main color */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.interactive-header::after h1{
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #6c63ff;
+    margin: 10px auto 0 auto;
+    border-radius: 2px;
+    transition: width 0.3s ease, background 0.3s ease;
+}
+
+.interactive-header h1:hover {
+    color: #7a78c0; /* Darker shade on hover */
+    transform: scale(1.1); /* Slight enlargement */
+  }
+  
+.interactive-header h1:hover::after {
+    width: 120px; /* Expanded underline effect */
+    background: #3e38fd; /* Match hover color */
+  }
+
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: white;
+}
+
+/* Interactive Header */
+.interactive-header {
+    position: relative;
+    background-color: #000;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.interactive-header h1 {
+    font-size: 40px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    z-index: 10;
+    position: relative;
+}
+
+/* Glowing Bubbles Effect */
+.bubbles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.bubbles::before,
+.bubbles::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 10%, transparent 50%);
+    animation: moveBubbles 10s infinite linear;
+    opacity: 0.5;
+}
+
+.bubbles::after {
+    animation-duration: 15s;
+    animation-direction: reverse;
+}
+
+@keyframes moveBubbles {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(-100%);
+    }
+}
+
+/* Contact Section */
+.contact-section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.contact-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #ff1493;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    transition: box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    box-shadow: 0 0 8px #ff1493;
+    outline: none;
+}
+
+.contact-form button {
+    background-color: #ff1493;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #e01380;
+    transform: scale(1.05);
+}
+
+/* Social Icons */
+.social-icons {
+    margin-top: 30px;
+}
+
+.social-icons h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #ff1493;
+}
+
+.social-icon {
+    font-size: 30px;
+    color: white;
+    margin: 0 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #ff1493;
+    transform: scale(1.2);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #000;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #777;
+}
+
+.footer p {
+    margin: 0;
+    letter-spacing: 1px;
+}

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Ni Raph</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <header class="header">
+    <a href="#" class="logo"><span>Raph</span>ael</a>
+    <nav class="navbar">
+      <a href="#" class="active">Portfolio</a>
+      <a href="#">Home</a>
+      <a href="#">About Me</a>
+      <a href="#">Achievements</a>
+      <a href="#">Hobbies</a>
+    </nav>
+    <a href="#" class="contact">Contact Me</a>
+  </header>
+  <section class="home">
+    <div class="home-content">
+      <h3>Hi</h3>
+      <h1>
+        I'm <span>Raphael <br /></span>Photographer | <span> </span> Designer
+        <br />
+      </h1>
+      <p>Rising from the South of Caloocan
+        19 year old man with many ambitions.</p>
+      <div class="bnt-box">
+        <button class="btn-1">Penge Gcash</button>
+        <button class="btn-2">Oh Experience</button>
+      </div>
+    </div>
+    <div class="img-box">
+      <img src="photos/Rapph pic.png" alt="#" />
+    </div>
+  </section>
+
+  <section class="about-me">
+    <div class="about-img">
+      <img src="photos/Rapph pic2.png" alt="#" />
+    </div>
+    <div class="about-content">
+      <h2 class="heading">About <span>Me</span></h2>
+      <h3>Photographer <span> | Web Designer</span></h3>
+      <p>
+        Hi, I'm Juan Raphael Apellanes, but you can call me Raph. I'm from
+        Caloocan City, Metro Manila. I attended La Consolacion College Caloocan
+        from Grade 1 through senior high school, where I completed the ICT
+        strand.
+      </p>
+      <a href="#" class="btn-2">Achievements</a>
+    </div>
+  </section>
+
+  <section class="achievements" id="achievements">
+    <div class="achievements-content">
+      <h2 class="heading">My <span>Achievements</span></h2>
+      <h3>Inside <span> | Outside Campus</span></h3>
+      <p>
+        I graduated from La Consolacion College Caloocan with a specialization
+        in the ICT strand and received a Loyalty Award. Additionally, I am
+        committed to the Kids For Christ community and served as the chapter
+        "Kuya Head" of the community.
+      </p>
+      <a href="#" class="btn-3">Hobbies</a>
+    </div>
+    <div class="achievements-img">
+      <img src="photos/rapph pic3.png" alt="achievements image" />
+    </div>
+  </section>
+
+  <section class="hobbies" id="hobbies">
+    <h2 class="heading">My <span>Hobbies</span></h2>
+    <div class="hobbies-container">
+      <div class="hobbies-box">
+        <i class="bx bx-camera"></i>
+        <h3>Photography</h3>
+        <p>
+          Photography is my passion because it allows me to capture and share
+          the beauty of the world through my lens. Each shot tells a unique
+          story and freezes a moment in time that can be cherished forever.
+        </p>
+        <a href="#" class="btn-4">Read More</a>
+      </div>
+
+      <div class="hobbies-box">
+        <i class="bx bx-walk"></i>
+        <h3>Going Places</h3>
+        <p>
+          I love going outside because it allows me to connect with nature and
+          appreciate its beauty. The fresh air and open spaces bring a sense of
+          peace and tranquility that’s hard to find indoors. Being surrounded by
+          the natural world helps me feel rejuvenated and inspired.
+        </p>
+        <a href="#" class="btn-4">Read More</a>
+      </div>
+
+      <div class="hobbies-box">
+        <i class="bx bx-alarm-snooze"></i>
+        <h3>Sleeping</h3>
+        <p>
+          I wanna sleep lang kasi lagi me pagod, mentally and physically tired.
+          T-T
+        </p>
+        <a href="#" class="btn-4">Read More</a>
+      </div>
+    </div>
+  </section>
+  <body>
+    <!-- Interactive Header -->
+    <header class="interactive-header">
+        <h1>My Shots</h1>
+        <div class="bubbles"></div>
+    </header>
+  <section class="My-Shots">
+    <div class="Shots-container">
+        <!-- Image 1 -->
+        <div class="gallery-item" onclick="showNextImage(0)">
+            <img src="photos/pic4.jpg" alt="Image 1">
+        </div>
+
+        <!-- Image 2 -->
+        <div class="gallery-item" onclick="showNextImage(1)">
+            <img src="photos/pic1.jpg" alt="Image 2">
+        </div>
+
+        <!-- Image 3 -->
+        <div class="gallery-item" onclick="showNextImage(2)">
+            <img src="photos/pic2.jpg" alt="Image 3">
+        </div>
+
+        <!-- Image 4 -->
+        <div class="gallery-item" onclick="showNextImage(3)">
+            <img src="photos/pic3.jpg" alt="Image 4">
+        </div>
+    </div>
+</section>
+
+<body>
+  <!-- Interactive Header -->
+  <header class="interactive-header">
+      <h1>Contact Me</h1>
+      <div class="bubbles"></div>
+  </header>
+
+  <!-- Contact Form Section -->
+  <section class="contact-section">
+      <div class="contact-container">
+          <h2>Let's Get in Touch</h2>
+          <form action="#" class="contact-form">
+              <input type="text" placeholder="Your Name" required>
+              <input type="email" placeholder="Your Email" required>
+              <textarea placeholder="Your Message" required></textarea>
+              <button type="submit">Send Message</button>
+          </form>
+
+          <div class="social-icons">
+              <h3>Follow Me</h3>
+              <a href="https://web.facebook.com/profile.php?id=61566452121695" target="_blank" class="social-icon"><i class='bx bxl-facebook-circle'></i></a>
+              <a href="https://l.messenger.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2Frpph.png%3Figsh%3DNmhjdnQ2N3RiZ3p0&h=AT1uzZf2RJQXPW3FzXJGAb204J5JLetwKIwlxUyifiJld0jazs3RsokbniDScTbopEz7bH7kRyfWvda_z9D8V0zDqc9f2BWRsjzQb1rNoHl0iQRFS1y67OEwXvxqxpM8Y2NYew" target="_blank" class="social-icon"><i class='bx bxl-instagram-alt'></i></a>
+              <a href="https://www.youtube.com/@MistaSlice" target="_blank" class="social-icon"><i class='bx bxl-youtube'></i></a>
+          </div>
+      </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+      <p>© 2024 Portfoilio Ko | All Rights Reserved</p>
+  </footer>
+</body>
+<script>
+  
+  let images = [
+      'image1.jpg',
+      'image2.jpg',
+      'image3.jpg',
+      'image4.jpg'
+  ];
+
+  function showNextImage(index) {
+      alert("You clicked on Image " + (index + 1)); // Example interaction
+  }
+</script>
+  </body>
+</html>
